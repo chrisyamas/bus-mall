@@ -60,6 +60,8 @@ main {
   background-color: rgb(138, 236, 138);
   margin-bottom: 20px;
   border-bottom: 2px solid green;
+  padding-left: auto;
+  padding-right: auto;
 }
 
 #view-results-btn:hover {
@@ -81,10 +83,17 @@ main {
 #img-container img {
   height: 175px;
   border-radius: 20px;
+  border-left: 1px solid #777;
+  border-right: 3px solid #777;
+  border-bottom: 5px solid #777;
 }
 
 #img-container img:hover {
   cursor: pointer;
+}
+
+#img-container img:focus {
+
 }
 
 #greenspan {
