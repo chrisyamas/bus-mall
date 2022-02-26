@@ -17,11 +17,11 @@ let showResults = document.getElementById('display-results-list');
 */
 // canvas element for chart.js
 let ctx = document.getElementById('prod-chart');
-let ctx2 = document.getElementById('prod2-chart');
+//let ctx2 = document.getElementById('prod2-chart');
 
-function getProdFave(clicks, views) {
+/*function getProdFave(clicks, views) {
   return Math.round((clicks/views)*100);
-}
+}*/
 
 // CONSTRUCTOR FUNCTION
 
@@ -30,7 +30,7 @@ function Prod(name, fileExtension = 'jpg') {
   this.views = 0;
   this.clicks = 0;
   this.src = `./img/${name}.${fileExtension}`;
-  this.fave = getProdFave(this.clicks, this.views);
+ // this.fave = getProdFave(this.clicks, this.views);
 
   allProducts.push(this);
 }
@@ -117,7 +117,7 @@ function handleClick(event) {
     prodContainer.removeEventListener('click', handleClick);
 
     renderChart1();
-    renderChart2();
+  //  renderChart2();
   }
 }
 
@@ -142,10 +142,10 @@ function renderChart1() {
         label: '# of Clicks',
         data: prodClicks,
         backgroundColor: [
-          'red'
+          'purple'
         ],
         borderColor: [
-          'red'
+          'purple'
         ],
         borderWidth: 1,
         hoverBorderColor: 'black'
@@ -154,10 +154,10 @@ function renderChart1() {
         label: '# of Views',
         data: prodViews,
         backgroundColor: [
-          'blue'
+          'green'
         ],
         borderColor: [
-          'blue'
+          'green'
         ],
         borderWidth: 1
       },]
@@ -174,7 +174,7 @@ function renderChart1() {
   const prodChart = new Chart(ctx, chartObject);
 }
 
-function renderChart2() {
+/*function renderChart2() {
   let prodNames = [];
   let prodClicks = [];
   let prodViews = [];
@@ -216,7 +216,7 @@ function renderChart2() {
   };
 
   const prodChart = new Chart(ctx2, chartObject2);
-}
+}*/
 prodContainer.addEventListener('click', handleClick);
 
 
