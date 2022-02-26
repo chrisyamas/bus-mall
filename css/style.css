@@ -77,12 +77,12 @@ main {
 }
 
 #redspan {
-  color: red;
+  color: green;
   font-weight: bold;
 }
 
 #bluespan {
-  color: blue;
+  color: purple;
   font-weight: bold;
 }
 
@@ -99,7 +99,7 @@ main {
   grid-column: 1/-1;
   font-family: 'Times New Roman', Georgia, Times, serif;
   padding: 30px;
-  background-color: rgb(197, 255, 192);
+  background-color: rgb(220, 248, 217);
   border-radius: 10px;
   min-width:max-content;
 }
