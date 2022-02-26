@@ -35,6 +35,15 @@ function Prod(name, fileExtension = 'jpg') {
   allProducts.push(this);
 }
 
+// LOCAL STORAGE FUNCTIONS
+
+function setLocalStorage(array) {
+  localStorage.setItem('cart', JSON.stringify(array));
+}
+
+function getLocalStorage(array) {
+  localStorage.getItem('cart', JSON.parse(array));
+}
 // INSTANTIATE OBJECTS
 
 new Prod('sweep', 'png');
@@ -127,6 +136,7 @@ function renderChart1() {
   let prodNames = [];
   let prodClicks = [];
   let prodViews = [];
+  setLocalStorage(allProducts);
 
   for (let i = 0; i < allProducts.length; i++) {
     prodNames.push(allProducts[i].name);
