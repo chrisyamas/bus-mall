@@ -76,12 +76,12 @@ main {
   cursor: pointer;
 }
 
-#redspan {
+#greenspan {
   color: green;
   font-weight: bold;
 }
 
-#bluespan {
+#purplespan {
   color: purple;
   font-weight: bold;
 }
